@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+/* colors */
+:root{
+    --soft-violet:hsl(277, 64%, 61%);
+    --desaturated-blue:hsl(244, 38%, 16%);
+    --dark-blue:hsl(233, 47%, 7%);
+    --white: hsl(0, 0%, 100%);
+    --slightly-white1:hsla(0, 0%, 100%, 0.75);
+    --slightly-white2:hsla(0, 0%, 100%, 0.6);
+
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--dark-blue);
+    font-family: 'Inter', sans-serif;
+}
+.card{
+    display: flex;
+    width: 60%;
+   background-color: var(--desaturated-blue);
+    color: white;
+    border-radius: 8px;
+    overflow: hidden;
+
+}
+.description{
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.main-heading span{
+    color: var(--soft-violet);
+}
+.paragraph{
+    font-family: 'Inter', sans-serif;
+    color: var(--slightly-white1);
+    line-height: 2;
+}
+.stats{
+    display: flex;
+    gap: 60px;
+    list-style: none;
+    margin-top: 30px;
+    font-size: 20px;
+}
+.stats li small{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: x-small;
+    font-weight:lighter;
+    color: var(--slightly-white2);
+    letter-spacing: 1px;
+}
+figure {
+background-color: var(--soft-violet);
+height: 360px;
+}
+/* desktop view IMage STYLE*/
+figure #desktop-v{
+    mix-blend-mode:multiply;
+    display: block;
+    height: 360px;
+   
+}
+/* MOBILE VIEW IMAGE STYLE */
+#mobile-v{
+    display: none;
+    mix-blend-mode:multiply;
+
+}
+@media (max-width: 952px){
+   .card{
+  width: 100%;
+     margin: 40px;
+  }
+  figure #desktop-v{
+    display: block;
+}
+
+
+}
+@media screen and (max-width:400px){
+    .container{
+        padding: 40px 0px;
+        height: fit-content;
+        text-align: center;
+    }
+    .card{
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+    .stats{
+        flex-direction: column;
+        align-items: center;
+    }
+    .description{
+        padding: 30px;
+    }
+    figure #desktop-v{
+        display: none;
+    }
+    #mobile-v{
+        display: block;
+        height: 220px;
+        width: 100%;
+    }
+    figure{
+        height: 220px;
+    }
+    
+}
