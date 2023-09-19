@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+:root {
+    --Softblue: hsl(215, 51%, 70%);
+    --MainVerydarkblue: hsl(217, 54%, 11%);
+    --cardVerydarkblue: hsl(216, 50%, 16%);
+    --LineVerydarkblue: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .2s ease-in-out;
+}
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--MainVerydarkblue);
+}
+
+/* Styling for the NFT section */
+.nft {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 15px;
+    border-radius: 15px;
+    background-color: var(--cardVerydarkblue);
+}
+.nft .nft-image img {
+    border-radius: 8px;
+}
+/* Styling for the NFT title */
+.nft .nft-title {
+    color: var(--White);
+    font-size: 20px;
+}
+.nft .nft-title:hover, .buttom p span:hover {
+    cursor: pointer;
+    color: hsl(178, 100%, 50%);
+}
+/* Styling for the NFT description */
+.nft p {
+    color: var(--Softblue);
+    font-weight: 300;
+}
+#clock {
+    float: right;
+}
+#clock::after {
+    content: "3 days left";
+    font-size: 14px;
+    position: relative;
+    top: -3px;
+    color: var(--Softblue);
+}
+.ethereum b {
+    position: relative;
+    top: -3px;
+    letter-spacing: 2px;
+    color: hsl(178, 100%, 50%);
+}
+/* Styling for the overlay when hovering over the image */
+.nft .nft-image:hover .overlay {
+    opacity: 1;
+    cursor: pointer;
+}
+.overlay {
+    background-color:  hsla(178, 100%, 50%, 0.463);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 99%;
+    border-radius: 8px;
+    opacity: 0;
+}
+.nft-image {
+    position: relative;
+}
+/* Styling for the creator information and avatar */
+.buttom {
+    display: flex;
+    gap: 10px;
+    padding: 10px 0;
+    border-top: 1px solid hsla(215, 52%, 70%, 0.564);
+}
+
+.buttom img {
+    border: 1px solid white;
+    border-radius: 50%;
+}
+.buttom p {
+    align-self: center;
+}
+.buttom p span {
+    color: white;
+}
+
+/* Media queries for responsive design */
+@media (max-width:975px) {
+    .nft {
+        transform: scale(1.5);
+    }
+}
+@media screen and (max-width:415px) {
+    .nft {
+        transform: scale(1.2);
+    }
+}
