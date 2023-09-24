@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fylo.io</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+<link rel="manifest" href="./favicon/site.webmanifest">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <!-- Navigation -->
+        <header>
+            <nav>
+                <figure class="logo">
+                    <a href="http://">
+                        <img src="./images/logo.svg" alt="" srcset="" width="100">
+                    </a>
+                </figure>
+                <ul class="links">
+                    <li><a href="http://#">Features</a></li>
+                    <li><a href="http://#">Team</a></li>
+                    <li><a href="http://#">Sign In</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- section 1 -->
+        <section class="hero-section">
+            <div class="introduction">
+                <h1>All your files in one secure <br>location, accessible anywhere.</h1>
+                <p>Fylo stores your most important files in one secure location . Access <br>them wherever you need share and collaborate with friends, family,<br> and co-workers.</p>
+                <form action="" id="email-form">
+                    <input type="email" name="email" id="email" placeholder="Enter your email...">
+                    <button class="getstarted" type="submit" id="submit">Get Started</button>
+                </form>
+                <p class="error-message" id="email-error">Please enter a valid email.</p>
+            </div>
+            <figure class="illustration-1">
+                <img src="./images/illustration-1.svg" alt="" width="550">
+            </figure>
+        </section>
+        <!-- Section 2 -->
+        <section class="stay-productive">
+            <section class="stay-productive2">
+                <div>
+                    <h1>Stay productive, wherever you are</h1>
+                    <p>Never let location be an issue when accessing files. Fylo has you <br>covered for all your storage needs.</p>
+                    <p>Securely share files and folders with friends, family, and colleagues for <br>live collaboration. No email attachments required.</p>
+                    <a href="">See how Fylo works <img src="./images/icon-arrow.svg" alt=""></a>
+                    <article class="testimonial">
+                        <img src="./images/icon-quotes.svg" alt="" width="20">
+                        <p>Fylo has improved our team's productivity by <br>an order of magnitude. Since making the switch, our team has become a well-oiled collaboration machine.</p>
+                        <span class="person">
+                            <img src="./images/avatar-testimonial.jpg" alt="" class="testimonial-Avatar" width="30">
+                            <span>
+                                <h4>Kyle Burton</h4>
+                                <small>Founder & CEO, Huddle</small>
+                            </span>
+                        </span>
+                    </article>
+                </div>
+                <figure class="illustration-2">
+                    <img src="./images/illustration-2.svg" alt="" width="500">
+                </figure>
+            </section>
+        </section>
+        <!-- Section 3 -->
+        <section class="get-early-access">
+            <div>
+                <h2>Get early access today</h2>
+                <p>It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.</p>
+            </div>
+            <form action="" id="early-access-form">
+                <input type="email" name="email" id="early-access-email" placeholder="email@example.com"><br>
+                <p class="error-message" id="early-access-email-error">Please enter a valid email.</p>
+                <button class="getstarted" type="submit" id="submit2">Get Started for free</button>
+            </form>
+        </section>
+     
+        <footer>
+            <figure>
+                <img src="./images/logo2.svg" alt="" srcset="" id="logo">
+            </figure>
+            <section class="footer-details">
+                <ul>
+                    <li><img src="./images/icon-phone.svg" alt=""> Phone: +1-543-123-4367</li>
+                    <li><img src="./images/icon-email.svg" alt=""> example@fylo.com</li>
+                </ul>
+                <ul>
+                    <li><a href="">About US</a></li>
+                    <li><a href="">Jobs</a></li>
+                    <li><a href="">Press</a></li>
+                    <li><a href="">Blog</a></li>
+                </ul>
+                <ul>
+                    <li>Contact Us</li>
+                    <li>Terms</li>
+                    <li>Privacy</li>
+                </ul>
+            </section>
+        </footer>
+    </main>
+
+    <script>
+        const emailForm = document.getElementById('email-form');
+        const emailInput = document.getElementById('email');
+        const emailError = document.getElementById('email-error');
+        const submit = document.getElementById('submit');
+        const submit2 = document.getElementById('submit2');
+        const earlyAccessForm = document.getElementById('early-access-form');
+        const earlyAccessEmailInput = document.getElementById('early-access-email');
+        const earlyAccessEmailError = document.getElementById('early-access-email-error');
+
+        submit.addEventListener('click', function (e) {
+            if (!emailInput.validity.valid) {
+                console.log('hello')
+                e.preventDefault(); // Prevent form submission
+                emailError.classList.add('show');
+            } else {
+                emailError.classList.remove('show');
+            }
+        });
+
+        submit2.addEventListener('click', function (e) {
+            if (!earlyAccessEmailInput.validity.valid) {
+               
+                e.preventDefault(); // Prevent form submission
+                earlyAccessEmailError.classList.add('show');
+            } else {
+                console.log('hell')
+                earlyAccessEmailError.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>
