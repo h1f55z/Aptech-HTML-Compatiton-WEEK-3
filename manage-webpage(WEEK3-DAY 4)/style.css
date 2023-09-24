@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap');
+:root{
+    --dark-blue:hsl(228, 39%, 23%);
+    --light-gray:hsl(0, 0%, 98%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Be Vietnam Pro', sans-serif;
+
+}
+
+/* General */
+main{
+  background-image: url(./images/bg-tablet-pattern.svg),url(./images/hhh.svg);
+   background-position: 165% -35%,100% 65% ;
+    background-repeat: no-repeat;
+    background-color: white;
+  
+}
+/* navigation */
+header nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 150px;
+    position: relative;
+}
+#check{
+    display: none;
+}
+.checkbtn{
+    position: absolute;
+    right: 30px;
+    top: 50px;
+    cursor: pointer;
+    display: none;
+}
+nav .links li{
+  display: inline-block;
+  margin-left: 15px;
+  font-size: small;
+}
+ a{
+    color: hsl(227, 12%, 61%);
+    cursor: pointer;
+}
+/* this refer To All orange buttons */
+.get-started{
+    background-color: hsl(12, 88%, 59%);
+    color: white;
+    border-radius: 25px;
+    padding: 15px 25px;
+    width: fit-content;
+    border: none;
+    box-shadow: 0px 10px 10px -10px hsl(12, 88%, 59%);;
+}
+/* for burger menu */
+@media (max-width: 415px) {
+    .checkbtn{
+        display: block;
+    }
+    .links{
+        position: fixed;
+        width: 100%;
+        top: 90px;
+        height: 100vh;
+        background-color: var(--dark-blue);
+        transition: all .5s ;
+        z-index:999;
+        right: -100%;
+    }
+    nav .links li{
+      display: block;
+      padding: 15px;
+      border-bottom: 1px solid;    
+    }
+    header nav{
+       flex-direction: column;       
+    } 
+    #check:checked~.links{
+        right: 0; 
+    }
+}
+/* First Section  */
+.main-body{
+    display: grid;
+    grid-template-columns: 450px 420px;
+    padding: 10px 145px;
+    gap: 100px;    
+}
+.intro h1{
+  font-size: 38px;  
+
+}
+.illustration-intro {
+   margin: 0 auto;
+}
+/* For All Paragraphs */
+p{
+    font-size: small;
+    color: hsl(227, 12%, 61%);
+    margin: 15px 0px;
+    line-height: 1.5;
+}
+/* For All h1 and h2 */
+h1,h2{
+    color:var(--dark-blue);
+}
+.different{
+    padding-right:100px ;
+}
+.different h1{
+    font-size: 28px;
+}
+.discription ul li{
+    display: flex;
+    gap: 20px;
+}
+.discription .get-started{
+    height: fit-content;
+    border-radius: 205px;
+    width: 140px;
+    padding: 5px;
+    text-align: center;
+    font-size: 12px;
+}
+/* Testimonial Section */
+.testimonials{
+    text-align: center;
+    
+}
+.people{
+    display: flex;
+    gap: 20px;
+    margin: 0px 0 30px 0;
+}
+/* Boxes Containing the Peoples Text */
+.cover{
+   border-radius: 5px;
+    position: relative;
+    padding: 35px 20px 10px;
+    background-color: hsl(0, 0%, 98%);
+}
+.testimonials .get-started{
+    margin-bottom: 150px;
+}
+.people li {
+margin: 0 10px;
+}
+.people li img{
+   position: relative;
+    top: 35px;
+   z-index: 1;
+}
+.people h3{
+    color: ;
+}
+.sub-header,footer{
+    display: flex;
+    padding: 50px 145px;
+    justify-content: space-between;
+  background-color: hsl(12, 88%, 59%);
+  background-position: 200px -150px;
+  background-image:  url(./images/bg-simplify-section-desktop.svg);
+
+}
+
+.sub-header h1{
+    color: white;
+    width: 300px;
+}
+.sub-header .get-started{
+    background-color: white;
+    color: hsl(12, 88%, 59%);
+    height: fit-content;
+    align-self: center;
+  
+}
+
+footer{
+    background-image: none;
+   background-color: hsl(231, 16%, 17%) ; 
+
+}
+
+footer ul li{
+    color: hsl(227, 12%, 61%);
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+.social-media{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+footer .social-media ul  {
+display: flex;
+gap: 15px;
+
+}
+footer .mail input{
+    border-radius: 25px;
+    padding: 10px 15px ;
+    width: 200px;
+    border: none;
+}
+.mail .get-started{
+   padding: 10px ;
+   width: 50px;
+}
+.mail small{
+    position: relative;
+    left: 30px;
+    top: 60px;
+    color: hsl(227, 12%, 61%);;
+}
+/* respomsive For Tablet */
+@media  (max-width:985px) {
+    nav ul li a {
+        font-size: 15px;
+        color: hsl(12, 88%, 59%);;
+        &:hover{
+            color: hsl(227, 12%, 61%);
+          }
+     }
+    .main-body,footer{
+        grid-template-columns: 300px auto;
+        padding: 15px ;
+    }
+    .illustration-intro img{
+        width: 350px;
+       }
+    header nav{
+        padding: 50px 10px;
+        gap: 0px;
+        flex-wrap: wrap;
+    }
+    header nav .logo img{
+    width: 250px;
+   }
+    .different{
+        padding: 0;
+    }
+}
+/* Responsive for Phone */
+@media screen and (max-width:415px) {
+    .main-body{
+        grid-template-columns: 100%;
+     }
+    .people{
+       flex-direction: column;
+    }
+    .mail small{
+        position: static;
+    }
+    .sub-header{
+        padding: 50px 10px;
+    }
+    .sub-header .get-started{
+       align-self: initial;
+    }
+    footer{
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
